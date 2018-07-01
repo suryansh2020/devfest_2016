@@ -1,0 +1,11 @@
+version: '2'
+services:
+  web:
+    image: docker.dev/caffe_notebook:gpu 
+    ports:
+    - "8888"
+    volumes:
+    - /mfs/replicated/datasets/caffe_models:/data
+    - /mfs/replicated/dockers/resnet50-caffe/data/test_images:/images
+    - /mfs/replicated/notebooks:/workspace
+    restart: always 

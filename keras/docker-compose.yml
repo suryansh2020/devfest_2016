@@ -1,0 +1,9 @@
+version: '2'
+services:
+  caffe_finetuning:
+    image: caffe:gpu
+    volumes:
+    - $PWD:/workspace/
+    - /home/eva/git/image-analyzer-data/:/data/images
+    - /mfs/replicated/datasets/caffe_models/:/data/models
+    command: bash

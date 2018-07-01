@@ -1,0 +1,6 @@
+version: '2'
+services:
+  web:
+    image: jupyter/scipy-notebook
+    ports:
+    - "8888"
